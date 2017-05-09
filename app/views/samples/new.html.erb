@@ -1,0 +1,32 @@
+<h2> Add New Sample </h2>
+
+<%= form_for @sample do |f| %>
+
+<% if @sample.errors.any? %>
+<% @sample.errors.full_messages.each do |msg| %>
+<!-- show errors -->
+<div class="alert alert-danger"><%= msg %></div>
+<% end %>
+<% end %>
+
+  <div class="form-group">
+    <%= f.label :name %> <br />
+    <%= f.text_field :sample_name, class:'form-control' %></br >
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category %> <br />
+    <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]},
+    {:include_blank => 'Select One'}, class:'form-control' %></br ></br >
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image %> <br />
+    <%= f.file_field :image %></br >
+  </div>
+
+
+  <%= f.submit "Submit", class:'btn btn-primary' %>
+  <%=link_to "Cancel", samples_path, class:'btn btn default' %>
+
+<% end %>

@@ -1,0 +1,13 @@
+<div id="samples-index">
+  <% @samples.each_slice(4) do |sample|%>
+    <div class="row">
+      <% sample.each do |sample| %>
+        <div class="col-md-3 col-sm-3">
+          <h3><%= sample.sample_name %></h3>
+          <%= link_to image_tag(sample.image.url), sample_path(sample)%>
+
+        </div>
+      <%end%>
+    </div>
+  <% end %>
+</div>
