@@ -31,7 +31,10 @@
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-
+config.cache_classes = true
+config.serve_static_files = true
+config.assets.compile = true
+config.assets.digest = true
 
 # Custom SSH Options
 # ==================
