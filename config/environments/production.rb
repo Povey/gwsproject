@@ -18,8 +18,6 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.assets.precompile += %w(application-fcd37834a28a9742e688be2abeae0fe631927aeba91d7f7112469a879b2e1bd5.js)
-  config.assets.precompile += %w(application-fcd37834a28a9742e688be2abeae0fe631927aeba91d7f7112469a879b2e1bd5.js.gz)
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
