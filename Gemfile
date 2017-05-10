@@ -22,7 +22,7 @@ gem 'devise'
 
 gem 'net-ssh'
 
-gem 'sass'
+gem 'bootstrap-sass', '3.2.0.2'
 
 gem 'sprockets'
 
