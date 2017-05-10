@@ -22,6 +22,9 @@ gem 'devise'
 
 gem 'net-ssh'
 
+gem 'sass'
+
+gem 'sprockets'
 
 gem 'paperclip'
 

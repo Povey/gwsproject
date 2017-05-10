@@ -131,6 +131,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    sass (3.4.23)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -175,6 +176,8 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.2)
   rails_12factor
+  sass
+  sprockets
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
