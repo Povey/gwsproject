@@ -13,14 +13,14 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: yzfw46bcen9yvmgu
-  password: zvz248163319ldls
-  host: s54ham9zz83czkff.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+  username: gwadmin
+  password: password
+  host: localhost
   socket: MySQL
 
 development:
   <<: *default
-  database: djalz7b0ccmby9az
+  database: gws_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: djalz7b0ccmby9az
-  username: yzfw46bcen9yvmgu
+  database: gws_production
+  username: gws
   password: <%= ENV['GWS_DATABASE_PASSWORD'] %>
