@@ -3,6 +3,7 @@ class ImagesController < ApplicationController
   def new
     @page_title = 'Add New Image'
     @image = Image.new
+    @category = Category.new
   end
 
 
