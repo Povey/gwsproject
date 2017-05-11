@@ -1,0 +1,17 @@
+<h2>Categories</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th>Category Name</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @gallerycategories.each do |gallerycategory| %>
+    <tr>
+      <td><%= gallerycategory.name %> </td>
+      <td><%= link_to 'Edit', edit_gallerycategory_path(gallerycategory.id) %> | <%= link_to 'Delete', gallerycategory_path(gallerycategory), method: :delete, data: {confirm: '
+Are you sure?
+All associated samples will be deleted'}%></td>
+    </tr>
+  <% end %>
+</table>

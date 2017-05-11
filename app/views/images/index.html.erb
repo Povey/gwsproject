@@ -1,0 +1,12 @@
+<div id="samples-index">
+  <% @images.each_slice(4) do |image|%>
+    <div class="row">
+      <% image.each do |image| %>
+        <div class="col-md-3 col-sm-3">
+          <h3><%= image.image_name %></h3>
+          <%= link_to image_tag(image.attachment.url), image_path(image)%>
+        </div>
+      <%end%>
+    </div>
+  <% end %>
+</div>

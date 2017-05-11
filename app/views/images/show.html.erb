@@ -1,0 +1,26 @@
+
+<div id="images-show">
+  <h3><%= @image.image_name %></h3>
+    <div class="images-show-left">
+      <%= image_tag(@image.attachment.url) %>
+
+    </div>
+    <div class="images-show-right">
+    <br />
+      <h3>Sample Info:</h3>
+      <ul>
+        <li><h4><strong>Name: </strong> <%= @image.image_name%> </h4></li>
+      </ul>
+    </div>
+    <br />
+    <h3> About this image </h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget ligula sed sapien semper ornare quis sed eros. Duis convallis congue leo a malesuada.
+      Curabitur consectetur sagittis turpis, ac porta ex vulputate quis. Nulla et feugiat lectus, ut pulvinar diam. Donec vitae lorem vulputate, rhoncus nisl id, molestie massa.
+      Nullam et lorem vel arcu malesuada sodales a quis leo. Suspendisse dui ex, finibus sed sollicitudin id, viverra fermentum risus. Donec sed sapien turpis. Quisque ac ornare mi.
+      Donec a augue lorem. Vestibulum dictum porttitor tortor, pellentesque iaculis tellus. Maecenas bibendum mauris ut augue iaculis laoreet. Nulla vitae commodo nisi.
+      Vestibulum quis metus quis mi facilisis rutrum quis vel justo. Aliquam erat volutpat. Vivamus sagittis erat vel tellus auctor lacinia.
+    </p>
+    <h3> Admin Functions </h3>
+    <%= link_to 'Edit', edit_image_path(@image.id) %>  | <%= link_to 'Delete', image_path(@image), method: :delete, data: {confirm:'Are you sure?'} %>
+</div>

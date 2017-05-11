@@ -1,6 +1,34 @@
 Rails.application.routes.draw do
 
 
+  get 'gallerycategories/new'
+
+  get 'gallerycategories/create'
+
+  get 'gallerycategories/update'
+
+  get 'gallerycategories/edit'
+
+  get 'gallerycategories/destroy'
+
+  get 'gallerycategories/index'
+
+  get 'gallerycategories/show'
+
+  get 'images/new'
+
+  get 'images/create'
+
+  get 'images/update'
+
+  get 'images/edit'
+
+  get 'images/destroy'
+
+  get 'images/index'
+
+  get 'images/show'
+
   devise_for :users
   get 'categories/new'
 
@@ -38,6 +66,8 @@ Rails.application.routes.draw do
 
   resources :samples
   resources :categories
+  resources :images
+  resources :gallerycategories
 
 
 
